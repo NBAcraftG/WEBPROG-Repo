@@ -96,12 +96,6 @@ ul {
   transform: scale(1.03);
 }
 
-/* ===== Resources ===== */
-.resources ul li {
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
 /* ===== Mobile ===== */
 @media (max-width: 768px) {
   .profile-img {
