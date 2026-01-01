@@ -61,7 +61,7 @@ h1 {
 
 /* ===== Card Section ===== */
 .card {
-  background: white;
+  background: rgba(10, 99, 233, 0.413);
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
