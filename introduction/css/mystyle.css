@@ -28,7 +28,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background:transparent);
+  background: rgba(0, 0, 0, 0.55);
   z-index: -1;
 }
 
@@ -36,7 +36,12 @@ body::after {
 .hero {
   text-align: center;
   padding: 3rem 1rem 2.5rem;
-  background: transparent;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0)
+  );
 }
 
 .profile-img {
@@ -60,17 +65,24 @@ body::after {
   padding: 1.5rem;
 }
 
+/* ===== Glass Cards ===== */
 .card {
-  background: transparent;
+  background: rgba(15, 15, 15, 0.6);
+  backdrop-filter: blur(8px);
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 8px 20px transparent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
 }
 
 h2 {
   color: #59a9e6;
   margin-bottom: 0.75rem;
+}
+
+.card p,
+.card li {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 ul {
