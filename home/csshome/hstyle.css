@@ -1,11 +1,8 @@
-/* ===== Base Reset ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-/* ===== Animated Background (Pure CSS, no SCSS nonsense) ===== */
 body {
   min-height: 100vh;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
