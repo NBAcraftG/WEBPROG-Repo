@@ -1,0 +1,100 @@
+/* ===== Base Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== Animated Background (Pure CSS, no SCSS nonsense) ===== */
+body {
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #def;
+  background-image:
+    radial-gradient(transparent 0.6em, #def 0.6em),
+    conic-gradient(at 1em 1em, transparent 270deg, #4203 270deg),
+    conic-gradient(at 1em 1em, transparent 270deg, #4204 270deg),
+    conic-gradient(at 1em 1em, transparent 270deg, #4205 270deg),
+    conic-gradient(at 1em 1em, transparent 270deg, #4206 270deg);
+  background-size: 1em 1em, 4em 4em, 4em 4em, 4em 4em, 4em 4em;
+  animation: bgX 12s infinite linear, bgY 12s infinite linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Background Animation ===== */
+@keyframes bgX {
+  0%, 100% { background-position-x: 0, 0, 1em, 2em, 3em; }
+  50% { background-position-x: 0, -3em, -5em, 8em, 5em; }
+}
+
+@keyframes bgY {
+  0%, 100% { background-position-y: 0, 0, 1em, 2em, 3em; }
+  50% { background-position-y: 0, -3em, -5em, 8em, 5em; }
+}
+
+/* ===== Content Layout ===== */
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(6px);
+  padding: 3rem;
+  max-width: 600px;
+  width: 90%;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Typography ===== */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ===== Card Section ===== */
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  color: #333;
+  line-height: 1.6;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Navigation ===== */
+.links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: #0066aa;
+  font-weight: 600;
+  position: relative;
+}
+
+.links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #0066aa;
+  transition: width 0.3s ease;
+}
+
+.links a:hover::after {
+  width: 100%;
+}
