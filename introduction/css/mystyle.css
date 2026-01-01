@@ -35,9 +35,8 @@ body::after {
 /* ===== Hero ===== */
 .hero {
   text-align: center;
-  padding: 2.5rem 1rem;
-  background: linear-gradient(135deg, #1a1a1a, #272727);
-  border-bottom: 2px solid #333;
+  padding: 3rem 1rem 2.5rem;
+  background: transparent;
 }
 
 .profile-img {
