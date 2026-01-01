@@ -44,8 +44,9 @@ body::after {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #59a9e6;
-  margin-bottom: 1rem;
+  border: 3px solid #ffbf4a;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
 .hero h1 {
