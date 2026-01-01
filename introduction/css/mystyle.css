@@ -28,7 +28,7 @@ body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background:transparent);
   z-index: -1;
 }
 
@@ -61,11 +61,11 @@ body::after {
 }
 
 .card {
-  background: #1a1a1a;
+  background: transparent;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 20px transparent);
 }
 
 h2 {
@@ -110,7 +110,4 @@ ul {
   .card {
     padding: 1.2rem;
   }
-}
-header.hero {
-  background: none !important;
 }
