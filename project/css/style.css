@@ -1,38 +1,108 @@
-/* ===== Projects Page Background ===== */
-.projects-bg::before {
+/* ===== Reset ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Base Body ===== */
+body {
+  min-height: 100vh;
+  position: relative;
+  color: #f2f2f2;
+  overflow-x: hidden;
+}
+
+/* ===== HOME / DEFAULT BACKGROUND ===== */
+body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: url("https://i.pinimg.com/originals/f9/f7/18/f9f718f50c7016b384de139b0e9a835e.gif")
-              center / cover no-repeat;
+  background: url("https://miro.medium.com/v2/resize:fit:1308/1*1Fd4aYtGmfawalZbl4RJFw.gif")
+    center / cover no-repeat;
   z-index: -2;
 }
 
-/* Optional overlay so text is readable */
-.projects-bg::after {
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: -1;
 }
-/* ===== Back Button ===== */
-.back-btn {
-  background: rgba(15, 15, 15, 0.6);
-  color: #f2f2f2;
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 0.6rem 1rem;
-  border-radius: 10px;
-  text-decoration: none;
-  backdrop-filter: blur(6px);
-  transition: background 0.3s ease;
+
+/* ===== PROJECTS PAGE BACKGROUND ===== */
+.projects-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.pinimg.com/originals/f9/f7/18/f9f718f50c7016b384de139b0e9a835e.gif")
+    center / cover no-repeat;
+  z-index: -2;
 }
 
-.back-btn:hover {
-  background: rgba(15, 15, 15, 0.8);
+.projects-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
-/* ===== WIP Styling ===== */
+/* ===== HERO ===== */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  background: transparent;
+}
+
+.hero h1 {
+  color: #59a9e6;
+  font-size: 2.2rem;
+}
+
+/* ===== PROFILE IMAGE ===== */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ffbf4a;
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  margin-bottom: 1rem;
+}
+
+/* ===== LAYOUT ===== */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+}
+
+/* ===== GLASS CARD ===== */
+.card {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* ===== HEADINGS ===== */
+h2 {
+  color: #59a9e6;
+  margin-bottom: 0.75rem;
+}
+
+/* ===== LISTS ===== */
+ul {
+  padding-left: 1.2rem;
+}
+
+/* ===== WIP SECTION ===== */
 .wip {
   text-align: center;
   padding: 3rem 2rem;
@@ -50,7 +120,41 @@
   opacity: 0.75;
 }
 
-/* ===== Footer ===== */
+/* ===== BACK BUTTON ===== */
+.back-btn {
+  background: rgba(15, 15, 15, 0.6);
+  color: #f2f2f2;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: rgba(15, 15, 15, 0.85);
+}
+
+/* ===== GALLERY ===== */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+
+/* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 1.5rem 1rem;
@@ -59,4 +163,24 @@
   color: rgba(255, 255, 255, 0.7);
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(6px);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .profile-img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }
