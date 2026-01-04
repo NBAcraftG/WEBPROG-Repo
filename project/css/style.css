@@ -1,3 +1,21 @@
+/* ===== Projects Page Background ===== */
+.projects-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("https://i.pinimg.com/originals/f9/f7/18/f9f718f50c7016b384de139b0e9a835e.gif")
+              center / cover no-repeat;
+  z-index: -2;
+}
+
+/* Optional overlay so text is readable */
+.projects-bg::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
 /* ===== Back Button ===== */
 .back-btn {
   background: rgba(15, 15, 15, 0.6);
