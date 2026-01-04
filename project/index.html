@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Back Button -->
+  <div style="padding: 1rem;">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Projects</h1>
+  </header>
+
+  <!-- Content -->
+  <main class="container">
+    <section class="card wip">
+      <h2>Work in Progress</h2>
+      <p class="wip-text">
+        Work in Progress, Hopefully….
+      </p>
+      <p class="wip-subtext">
+        This space is reserved for future projects once ideas,
+        motivation, and caffeine align.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Kurt / NBAcraft. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
