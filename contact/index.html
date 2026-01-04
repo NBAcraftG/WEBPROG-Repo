@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Kurt</title>
+  <link rel="stylesheet" href="css/mystyle.css">
+</head>
+<body>
+
+  <!-- Back Button -->
+  <div style="padding: 1rem;">
+    <a href="index.html" class="back-btn">← Back to Home</a>
+  </div>
+
+  <!-- Hero -->
+  <header class="hero">
+    <h1>Contact Me</h1>
+    <p>If you actually plan to send something meaningful.</p>
+  </header>
+
+  <!-- Content -->
+  <main class="container">
+    <section class="card contact-card">
+      <form class="contact-form">
+        <label>
+          Name
+          <input type="text" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" placeholder="you@example.com" required>
+        </label>
+
+        <label>
+          Message
+          <textarea rows="5" placeholder="Say something intelligent…" required></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Kurt / NBAcraft. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
