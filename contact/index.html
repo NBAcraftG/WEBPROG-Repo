@@ -6,37 +6,43 @@
   <title>Contact | Kurt</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+
+<body class="contact-bg">
 
   <!-- Back Button -->
   <div style="padding: 1rem;">
-    <a href="home/index.html" class="back-btn">← Back to Home</a>
+    <button class="back-btn" onclick="history.back()">← Back</button>
   </div>
 
   <!-- Hero -->
   <header class="hero">
     <h1>Contact Me</h1>
-    <p>If you actually plan to send something meaningful.</p>
+    <p>If you really need to reach me.</p>
   </header>
 
   <!-- Content -->
   <main class="container">
-    <section class="card contact-card">
+    <section class="card">
+      <h2>Get in Touch</h2>
+      <p>
+        For academic, professional, or genuinely interesting reasons only.
+      </p>
+
       <form class="contact-form">
-        <label>
-          Name
-          <input type="text" placeholder="Your name" required>
-        </label>
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
 
-        <label>
-          Email
-          <input type="email" placeholder="you@example.com" required>
-        </label>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
 
-        <label>
-          Message
-          <textarea rows="5" placeholder="Say something intelligent…" required></textarea>
-        </label>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
 
         <button type="submit">Send Message</button>
       </form>
